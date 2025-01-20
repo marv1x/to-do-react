@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding:0;
+}
+
+body{
+  background-color: #699bbd;
+}
+
+h3{
+  position: relative;
+  display:flex;
+  font-size: 75px;
+  justify-content: center;
+  padding: 5%;
+}
+
+.main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black; /* Задана ширина, стиль и цвет рамки */
+  color:black;
+  border-radius: 15px;
+  margin: 33%;
+  margin-top: 5%;   
+  background-color: white;
+  min-height: 600px;
+  min-width: 600px;
+  
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+input[type="text"] {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-left: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #28a745;
+}
+
+.button-style{
+  text-align: center;
+  padding: 12px;
+  background-color: #28a745;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-left: 15px;
+  outline: none;
+  border-style: none;
+}
+
+.input-information{
+  font-size: 35px;
+   /* background-color: red;  */
+  margin: 10px;
+  /* margin-left: 35px ; */
+}
+
+.SelectedStyleTask{
+  border: 0.002px none gray;
+  border-radius: 12px;
+  margin: 2%;
+  box-shadow: 10px 10px 25px rgba(0,0,0,0.1);
+  padding: 3%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 35px;
+}
+
+.SelectedStyleTask:hover{
+  margin: 1.5%;
+}
+
+.Delete-button{
+  background-color: white;
+  color: gray;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.Delete-button:hover{
+  color: red;
+}
+
+
+.SelectedStyleTask.completed{
+  text-decoration: line-through;
+}
