@@ -79,7 +79,8 @@ input[type="text"]:focus {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  font-size: 35px;
+  font-size: 25px;
+  overflow-wrap: break-word;
 }
 
 .SelectedStyleTask:hover{
@@ -102,3 +103,13 @@ input[type="text"]:focus {
 .SelectedStyleTask.completed{
   text-decoration: line-through;
 }
+
+.buttonClasses{
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  }
+
+  .Complete-button{
+    width: 75px;
+  }

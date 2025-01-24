@@ -66,10 +66,12 @@ function App() {
             {tasks.map((task) => (
               <div key={task.id} className={task.completed ? 'completed SelectedStyleTask' : 'SelectedStyleTask'}>
                 {task.text}
-                <button className="Delete-button" onClick={() => deleteTask(task.id)}>x</button>
-                <button onClick={() => toggleTaskCompletion(task.id)}>
+                <div className='buttonClasses'>
+                <button className='Complete-button'  onClick={() => toggleTaskCompletion(task.id)}>
                   {task.completed ? 'Undo' : 'Complete'}
                 </button>
+                <button className="Delete-button" onClick={() => deleteTask(task.id)}>x</button>
+                </div>
               </div>
             ))}
           </ul>
