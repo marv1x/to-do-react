@@ -113,3 +113,15 @@ input[type="text"]:focus {
   .Complete-button{
     width: 75px;
   }
+
+  .bitcoinPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 2em;
+    text-align: center;
+    font-size: 35px;
+    padding: 0px;
+    gap: 5px;
+  }

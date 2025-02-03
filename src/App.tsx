@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
+import BitcoinPrice from "./components/BitcoinPrice";
 
 // Типизация для задачи
 type Task = {
@@ -55,6 +56,11 @@ function App() {
 
   return (
     <>
+    <header>
+    <div className='bitcoinPrice'>
+      <BitcoinPrice />
+    </div>
+    </header>
       <div className="main">
         <h3>✔️To-do list</h3>
         <div className="input-group">
