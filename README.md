@@ -1,1 +1,1 @@
-![image](https://github.com/user-attachments/assets/1a79fdf0-fa73-40c0-942b-cb67d774995e)
+<img src="C:\Users\hikarinoyume.jr\Desktop\Projects\my-reacts-to-do-list\public\preview.gif">
