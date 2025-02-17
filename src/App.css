@@ -3,8 +3,14 @@
   padding:0;
 }
 
+button {
+  all: unset; /* Сбрасывает все стили */
+  cursor: pointer; /* Добавляет указатель при наведении */
+}
+
 body{
   background-color: #699bbd;
+  font-family: 'Roboto', sans-serif;
 }
 
 h3{
@@ -15,30 +21,31 @@ h3{
   padding: 5%;
 }
 
-.main{
+.main {
   position: relative;
   display: flex;
   flex-direction: column;
-  border: 3px solid black; /* Задана ширина, стиль и цвет рамки */
-  color:black;
+  border: 3px solid black;
+  color: black;
   border-radius: 15px;
-  margin: 33%;
-  margin-top: 5%;   
   background-color: white;
   min-height: 600px;
   min-width: 600px;
   
+  width: fit-content; /* Ограничивает ширину содержимым */
+  margin: 5% auto; /* Центрирует блок по горизонтали */
 }
+
 
 .input-group {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-
+  margin-top: 20px;
 }
 
-input[type="text"] {
+/* input[type="text"] {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -50,12 +57,13 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border-color: #28a745;
-}
+} */
 
 .button-style{
   text-align: center;
   padding: 12px;
-  background-color: #28a745;
+  background-color: #1976d2;
+  color: white;
   border-radius: 4px;
   margin-right: 10px;
   margin-left: 15px;
@@ -81,6 +89,7 @@ input[type="text"]:focus {
   justify-content: space-between;
   font-size: 25px;
   overflow-wrap: break-word;
+  align-items: center;
 }
 
 .SelectedStyleTask:hover{
@@ -91,7 +100,7 @@ input[type="text"]:focus {
   background-color: white;
   color: gray;
   border: none;
-  font-size: 35px;
+  font-size: px;
   cursor: pointer;
 }
 
@@ -116,12 +125,30 @@ input[type="text"]:focus {
 
   .bitcoinPrice{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
-    height: 2em;
+    height: 4em;
     text-align: center;
     font-size: 35px;
     padding: 0px;
     gap: 5px;
+  }
+
+  .hoverButton{
+    justify-content: center;
+    background-color: #1976d2;
+    border-radius: 4px;
+    border: 0;
+    min-width: 50px;
+    padding: 1px;
+    padding-top: 7px;
+    color: white;
+    margin-right: 15px;
+  }
+
+  .productName{
+    display: flex; 
+    align-items: center;
+    margin: 0 auto;
   }

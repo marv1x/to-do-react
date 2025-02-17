@@ -26,9 +26,9 @@ const BitcoinPrice = () => {
       {status === "failed" && <p>Ошибка: {error}</p>}
       {status === "succeeded" && (
         <p>
-          1  <img src="bitcoin.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "text-bottom" }} /> = {prices.USD?.toFixed(2)} <img src="usd.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "text-bottom" }} /> |
-          1  <img src="bitcoin.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "text-bottom" }} /> = {prices.EUR?.toFixed(2)} <img src="euro.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "text-bottom" }} /> |
-          1  <img src="bitcoin.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "text-bottom" }} /> = {prices.GBP?.toFixed(2)} <img src="gbp.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "text-bottom" }} />
+              <img src="usd.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "middle" }} /> {prices.USD?.toFixed(2)} <br></br>
+              <img src="euro.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "middle" }} /> {prices.EUR?.toFixed(2)} <br></br>
+              <img src="gbp.png" alt="Bitcoin" width="40" height="40" style={{ verticalAlign: "middle" }}  /> {prices.GBP?.toFixed(2)}
         </p>
       )}
     </div>

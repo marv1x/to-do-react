@@ -26,17 +26,30 @@ export const fetchBitcoinPrices = createAsyncThunk<
   Record<Currency, number>,
   void
 >("bitcoin/fetchPrices", async () => {
-  const response = await fetch(
-    "https://api.coindesk.com/v1/bpi/currentprice.json"
-  );
-  const data = await response.json();
-
-  return {
-    USD: data.bpi.USD.rate_float,
-    EUR: data.bpi.EUR.rate_float,
-    GBP: data.bpi.GBP.rate_float,
+  const symbols = {
+    USD: "BTCUSDT",
+    EUR: "BTCEUR",
+    GBP: "BTCGBP",
   };
+
+  const prices: Record<Currency, number> = {
+    USD: 0,
+    EUR: 0,
+    GBP: 0,
+  };
+
+  for (const [currency, symbol] of Object.entries(symbols)) {
+    const response = await fetch(
+      `https://api.binance.com/api/v3/ticker/price?symbol=${symbol}`
+    );
+    const data = await response.json();
+    prices[currency as Currency] = parseFloat(data.price);
+  }
+
+  return prices;
 });
+
+
 
 const bitcoinSlice = createSlice({
   name: "bitcoin",
