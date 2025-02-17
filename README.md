@@ -1,1 +1,1 @@
-![Dev built](public\preview.gif")
+![Dev built](public/preview.gif")
